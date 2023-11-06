@@ -1,0 +1,10 @@
+.bg-purple{
+    background-color: rgb(158, 31, 158);
+}
+.bg-greenyellow{
+    background-color: rgb(108, 209, 68);
+}
+
+a,a:link, a:hover{
+    color:white
+}

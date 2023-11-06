@@ -1,0 +1,57 @@
+{
+    "products" : [
+    
+    {
+       "id":1,
+      "name":"one plus",
+      "price":40000.5555,
+      "code" : "'M-0001'",
+      "discount" :0.20,
+      "image":"assets/oneplus-one.webp",
+      "publishedDate":"Wed sep 11 2023 11:25:35 GMT+0530 (India Standard Time)",
+     " discription":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam aspernatur temporibus itaque rerum distinctio sunt minus, deleniti sequi pariatur aut nam eum ipsum maxime veniam non porro quia ipsam."
+    },
+      {
+       "id":2,
+    "name":"iphone",
+    "price":60000.7777,
+    "discount ":0.10,
+    "code" : "'M-002'",
+    "image":"assets/one plus 2.webp",
+    "publishedDate":"Wed Oct 11 2023 11:25:35 GMT+0530 (India Standard Time)",
+    "discription":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam aspernatur temporibus itaque rerum distinctio sunt minus, deleniti sequi pariatur aut nam eum ipsum maxime veniam non porro quia ipsam."
+      },
+      {
+        "id":3,
+        "name":"lg tv",
+        "price":28000,
+        "discount" : 0,
+        "code" : "'M-003'",
+        "image":"assets/tv.jpg",
+        "publishedDate":"Wed nov 11 2023 11:25:35 GMT+0530 (India Standard Time)",
+        "discription":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam aspernatur temporibus itaque rerum distinctio sunt minus, deleniti sequi pariatur aut nam eum ipsum maxime veniam non porro quia ipsam."
+      },
+        {
+          "id":4,
+          "name":"samsung washing machine",
+          "price":48000,
+         " discount ": 0.05,
+          "code" : "'M-004'",
+          "image":"assets/washing mashine.webp",
+          "publishedDate":"Wed june 11 2023 11:25:35 GMT+0530 (India Standard Time)",
+          "discription":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam aspernatur temporibus itaque rerum distinctio sunt minus, deleniti sequi pariatur aut nam eum ipsum maxime veniam non porro quia ipsam."
+        },
+
+          {
+          "id":5,
+          "name":"samsung headphone",
+          "price":8000,
+          "discount" : 0.50,
+          "code" : "'M-005'",
+          "image":"assets/headphone.webp",
+          "publishedDate":"Wed jan 11 2023 11:25:35 GMT+0530 (India Standard Time)",
+          "{discription}":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam aspernatur temporibus itaque rerum distinctio sunt minus, deleniti sequi pariatur aut nam eum ipsum maxime veniam non porro quia ipsam."
+        }
+          
+  ]
+}

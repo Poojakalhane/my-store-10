@@ -1,0 +1,69 @@
+<!-- <p>Name : {{queryParam['name']}}</p>
+<p>Age : {{queryParam['age']}}</p> -->
+
+<!-- <input type="text" [formControl]="name">
+
+{{name.value}} -->
+
+<form [formGroup]="profileForm">
+    <div class="mb-3">
+        <label for="author" class="form-label">Name</label>
+        <span style="color:red;"> *</span>
+        <input type="text" class="form-control" id="name"
+        formControlName="name">
+        <!-- {{author.valid}} -->
+    </div>
+    <!-- {{profileControls['name'].errors | json}} -->
+   <!-- {{profileControls['name'].errors | json}} -->
+    <div class="alert alert-danger" 
+    *ngIf="profileControls['name'].invalid && profileControls['name'].touched && profileControls['name'].hasError('required')">
+        Name should be provided
+    </div>
+     <div class="alert alert-danger" *ngIf="profileControls['name'].touched && profileControls['name'].touched && profileControls['name'].hasError('minlength')">
+        Name should be atleast 3 character long 
+        </div>
+        
+    
+    <div class="alert alert-danger" 
+    *ngIf="profileControls['name'].invalid && profileControls['name'].touched && profileControls['name'].hasError('maxlength')">
+        Name should be max 10 character long
+    </div>
+
+    <div class="alert alert-danger" 
+    *ngIf="profileControls['name'].invalid && profileControls['name'].touched && profileControls['name'].hasError('forbidden')">
+        This name not allowed
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" 
+        formControlName="email" >
+        <div class="alert alert-danger" 
+    *ngIf="profileControls['email'].invalid && profileControls['email'].touched && profileControls['email'].hasError('required')">
+        Email should be provided
+    </div>
+    <div class="alert alert-danger" 
+    *ngIf="profileControls['email'].invalid && profileControls['email'].touched && profileControls['email'].hasError('email')">
+        Email should be well formed
+    </div>
+uuf-fjkj-nvq
+        <!-- {{email.valid}} -->
+
+    </div>
+    {{profileControls['email'].errors | json}}
+    <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile</label>
+        <input type="number" class="form-control" id="mobile" 
+        formControlName="mobile" >
+    </div>  
+    <!-- {{profileControls['mobile'].errors | json}}   
+    -->
+    <div class="alert alert-danger" 
+    *ngIf="profileControls['mobile'].invalid && profileControls['mobile'].touched && profileControls['mobile'].hasError('required')">
+        Mobile should be provided
+    </div>
+    
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>        
+</form>
+{{profileForm.value | json}}

@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="mb-4">
+        <button class="btn btn-primary m-5" (click)="goback()">Go Back</button>
+        <button class="btn btn-primary m-5" (click)="goPrevious()">< Previous</button>
+        <button class="btn btn-primary m-5" (click)="goNext()">Next ></button>
+
+    </div>
+    <img [src]="product.image"
+         [style.width.px]="150"
+         [style.height.px]="250"
+         [style.cursor]="'pointer'"/>
+    <h1 [style.cursor]="'pointer'">{{product.name | uppercase}} </h1>     
+    <div>
+        <button class="btn btn-primary m-5" [routerLink]="['/products',product.id,'review']">Review</button>
+    </div>
+
+    <!-- <div>
+        <button class="btn btn-primary m-5" [routerLink]="['/products',product.id,'review']">Review</button>
+    </div> -->
+    <router-outlet></router-outlet>
+</div>

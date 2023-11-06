@@ -1,0 +1,9 @@
+.custom-style1{
+    color:firebrick;
+    font-family: fantasy;
+    /* text-decoration: red ; */
+}
+.custom-style2{
+    color: blueviolet;
+    text-decoration: palevioletred underline;
+}

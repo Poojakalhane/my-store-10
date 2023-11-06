@@ -1,0 +1,73 @@
+<!-- <p>product-list works!</p> -->
+
+<!-- <p>{{name}}</p> -->
+<!-- <p>{{product.name}}</p>
+<p>{{40+100}}</p>
+
+<p>{{product.price}}</p>
+<p>{{7<9}}</p> -->
+
+<div class="container">
+  <div class="row my-4"> 
+    <label for="search" class="form-label">Search: </label> 
+    <input type="text" class="form-contrl"
+    id="search" placeholder="type for search..."
+   
+    [(ngModel)]="filterBy"/>
+    {{filterBy}}
+  </div>
+  <h3>Products:</h3>
+  <div class ="row my-4">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="showImage" [(ngModel)]="showImage">
+      <label class="form-check-label" for="showImage">ShowImage</label>
+     <span style="color:red"> </span>
+    </div>
+  </div>
+
+
+  <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+    {{errorMessage}}
+  </div>
+<div class="row row-cols-3">
+    
+     <!-- <div *ngFor="let p of products"> -->
+
+     
+      <div *ngFor="let p of filteredProducts | slice :0">
+       
+        <div class="card mb-4" style="width: 18rem;">
+          <div *ngIf="showImage">
+            <img [src]="p.image" class="card-img-top" 
+            [alt]="altText" [ngStyle]="imgStyle" [style.width.px]="150" [style.height.px]="200">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" [routerLink]="['/products',p.id]"
+                                      [style.cursor]="'pointer'"
+                                      [ngStyle]="nameStyle">{{p.name | uppercase }}</h5>
+              <p [ngStyle] ="priceStyle">{{p.price | currency:'INR':'symbol':'1.2-3'}}</p>
+              <p appHighlight>{{p.discount | percent}} OFF</p>
+              <p>Discounted Price:{{p.price | discountedPrice : p.discount |  currency:'INR':'symbol' }}</p>
+              <!-- <p class="card-text" [ngStyle] = "{'color':'red'}">{{p.discription}}</p> -->
+              <p appHighlight>{{p.publishedDate | date : 'dd-MMMM, yyyy hh:mm:ss a'}}</p>
+              <p>{{p.code | replaceCharacter : '='}}</p>
+              <p [ngClass]="customClass" class="card-text">{{p.discription | slice : 0 :50}}</p>
+              <!-- <a href="#" class="btn btn-primary">Add To cart</a> -->
+              <!-- <a href="#" class="btn btn-primary" [title]="titleText" (click)="addToCart(p,5)">Add To cart</a> -->
+              
+                <!-- <a href="#" class="btn btn-primary" [title]="titleText" (click)="addToCart(p,p.price)">Add To cart</a> -->
+                <!-- <a href="#" class="btn btn-primary" [title]="titleText" (click)="addToCart(p)">Add To cart</a>  -->
+                <a  class="btn btn-primary" [title]="titleText" (click)="addToCart($event,p)">Add To cart</a>
+               
+              </div>
+            </div>
+            </div>
+           </div>
+          
+        <!-- <p>{{p.id}}</p>
+        <p>{{p.name}}</p>
+        <p>{{p.price}}</p>
+        
+        <p>{{p.discription}}</p>
+     </div> -->
+</div>

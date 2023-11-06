@@ -1,0 +1,25 @@
+<h1>Pareant comonent</h1>
+<input type="number" 
+placeholder="enter a number"
+class="form-control m-2"
+[(ngModel)]="number1">
+<input type="number"
+ placeholder="enter a number"
+ class="form-control m-2"
+ [(ngModel)]="number2">
+
+ number1 : {{number1}}
+ number2 : {{number2}}
+
+ <app-result [num1]="number1" 
+             [num2]="number2"
+          (resultEmitter)="getResult($event)"></app-result>
+
+          <!-- num1 and num2 are declares input variables in the
+child component, they will get the value from parent using 
+property binding
+
+resultEmitter is declared as the output variable in the 
+child component, which will emit the value that the parent wants to
+tap. This emitted value will captured using $event parameter of 
+the event handler method-->

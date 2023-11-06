@@ -1,0 +1,53 @@
+<!-- <nav class="navbar navbar-expand-lg bg-purple"> -->
+     <!-- <nav class="navbar navbar-expand-lg" [class.bg-purple]="false"
+                                        [class.bg-primary]="false"
+                                        [class.bg-greenyellow]="true"> 
+                                         -->
+                                        
+    <nav class="navbar navbar-expand-lg"[ngClass] ="themeClass">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100">
+          <!-- <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/home" (click)="homePage()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/calculator">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/profile">Profile</a>
+          </li>  -->
+
+
+          <!-- for SPA  write insted of href to routerlink-->
+
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/home" (click)="homePage()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/calculator">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/profile">Profile</a>
+          </li> 
+          <li class="nav-item ms-auto">
+            <a class="nav-link btn btn-secondary" (click)="toggleTheme()">Toggle Theme</a>
+          </li>
+          <li class="nav-item btn" (click)="getCartCount()">
+          <i class="bi bi-cart3 text-light"></i>
+          <span class="bagde bg-danger text-light rounded-pill p-1">{{cartCount}}</span>
+        </ul>
+      </div>
+    </div>
+  </nav>
